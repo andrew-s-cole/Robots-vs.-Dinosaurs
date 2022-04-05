@@ -5,7 +5,7 @@ from robot import Robot
 class Battlefield:
     def __init__(self):
         self.robot = Robot('RX-78-2')
-        self.dinosaur = Dinosaur('Greymon',45)
+        self.dinosaur = Dinosaur('Greymon', 45)
 
     def run_game(self):
         self.display_welcome()
@@ -22,7 +22,6 @@ class Battlefield:
                 self.robot.attack(self.dinosaur)
             if self.dinosaur.health > 0:
                 self.dinosaur.attack(self.robot)
-            
 
     def display_winner(self):
         if self.robot.health <= 0:
