@@ -1,11 +1,13 @@
 from dinosaur import Dinosaur
 from robot import Robot
+import random
 
 
 class Battlefield:
     def __init__(self):
         self.robot = Robot('RX-78-2')
-        self.dinosaur = Dinosaur('Greymon', 45)
+
+        self.dinosaur = Dinosaur('Greymon', random.randrange(10, 30))
 
     def run_game(self):
         self.display_welcome()
@@ -20,6 +22,7 @@ class Battlefield:
 
             if self.robot.health > 0:
                 self.robot.attack(self.dinosaur)
+
             if self.dinosaur.health > 0:
                 self.dinosaur.attack(self.robot)
 
