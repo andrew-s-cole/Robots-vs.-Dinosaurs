@@ -7,7 +7,7 @@ class Battlefield:
     def __init__(self):
         self.robot = Robot('RX-78-2')
 
-        self.dinosaur = Dinosaur('Greymon', random.randrange(10, 30))
+        self.dinosaur = Dinosaur('Greymon', random.randrange(10,20))
 
     def run_game(self):
         self.display_welcome()
